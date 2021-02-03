@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: "postgres:latest"
+    ports:
+      - "5432:5432"
+    environment: 
+     POSTGRES_DB: exampledb
+     POSTGRES_USER: postgre
+     POSTGRES_PASSWORD: password
+  activemq:
+    image: "rmohr/activemq:latest"
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+  
